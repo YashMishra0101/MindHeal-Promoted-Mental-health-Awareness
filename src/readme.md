@@ -9,13 +9,14 @@
 <img src="src/assets/Screenshot (73).png">
 
 
+
 Developed SafeSpace web app with HTML5, Tailwind CSS, JavaScript, and React.js for a robust, modern 
 user interface.Promoted mental health awareness and support through SafeSpace, providing resources and professional 
 assistance
 
 ## 🌐 Project Demo 
 
-To see a live demo of the project, please visit : https://safespaces.netlify.app/
+To see a live demo of the project, please visit :
 
 ## Technologies Used
 
