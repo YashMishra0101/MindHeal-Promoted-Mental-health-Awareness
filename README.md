@@ -1,26 +1,31 @@
 # SafeSpace
 
-<img src="src/assets/Screenshot (405).png">
+<img src="src/assets/Screenshot (72).png">
 
-<img src="src/assets/Screenshot (406).png">
+<img src="src/assets/Screenshot (74).png">
 
-<img src="src/assets/Screenshot (407).png">
+<img src="src/assets/Screenshot (75).png">
 
-<img src="src/assets/Screenshot (408).png">
+<img src="src/assets/Screenshot (73).png">
 
 
-Developed the SafeSpace web app using HTML5, Tailwind CSS, JavaScript, React.js, and Firebase. Promoted mental health awareness and support by providing resources and professional assistance through SafeSpace.
+
+Developed SafeSpace web app with HTML5, Tailwind CSS, JavaScript, and React.js for a robust, modern 
+user interface.Promoted mental health awareness and support through SafeSpace, providing resources and professional 
+assistance
 
 ## 🌐 Project Demo 
 
-To see a live demo of the project, please visit : https://safespaces.netlify.app/
+To see a live demo of the project, please visit :
 
 ## Technologies Used
 
 - HTML
 - Tailwind CSS
-- React Js
-- Firebase
+- React
+- React Router
+- Axios
+
 
 ## Contributing
 
