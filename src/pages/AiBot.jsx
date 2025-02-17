@@ -114,7 +114,7 @@ const AiBot = () => {
       </div>
 
       <motion.div
-        className="p-4 flex items-center w-full  shadow-md "
+        className="p-4 flex items-center w-full pb-24 shadow-md "
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3 }}
