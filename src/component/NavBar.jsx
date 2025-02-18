@@ -46,6 +46,13 @@ const NavBar = () => {
       });
   };
 
+  const handleAIBotClick = (e) => {
+    if (!isLoggedIn) {
+      e.preventDefault(); 
+      toast.error("You Must Be Logged In To Access AI Bot.");
+    }
+  };
+
   return (
     <nav className="bg-purple-600 p-4 z-50">
       <div className="container mx-auto flex justify-between items-center z-50">
@@ -135,7 +142,7 @@ const NavBar = () => {
             <NavLink
               to="/aibot"
               className="block px-4 py-2 text-white hover:underline"
-              onClick={closeMenu}
+              onClick={(e) => handleAIBotClick(e)} 
             >
               AI Bot
             </NavLink>
