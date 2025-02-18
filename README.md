@@ -1,4 +1,4 @@
-# SafeSpace
+# MindHeal
 
 <img src="src/assets/Screenshot (72).png">
 

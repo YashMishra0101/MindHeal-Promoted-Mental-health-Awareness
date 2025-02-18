@@ -68,7 +68,7 @@ const NavBar = () => {
             <img src={logo} className="h-8" alt="SafeSpace Logo" />
           </Link>
           <Link to="/" onClick={closeMenu}>
-            <div className="text-white font-bold text-xl">SafeSpace</div>
+            <div className="text-white font-bold text-xl">MindHeal</div>
           </Link>
         </span>
 
@@ -110,7 +110,7 @@ const NavBar = () => {
               Support Resources
             </NavLink>
           </li>
-          <li className="border-t border-purple-400 md:border-0">
+           <li className="border-t border-purple-400 md:border-0">
             <NavLink to="/videoHelp" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
               Videos Help
             </NavLink>
@@ -134,7 +134,7 @@ const NavBar = () => {
             <NavLink to="/aibot" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
               AI Bot
             </NavLink>
-          </li>
+          </li> 
           {!isLoggedIn && (
             <>
               <li className="border-t border-purple-400 md:border-0">
