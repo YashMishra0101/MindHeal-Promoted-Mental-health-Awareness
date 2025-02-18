@@ -48,7 +48,7 @@ const NavBar = () => {
 
   const handleAIBotClick = (e) => {
     if (!isLoggedIn) {
-      e.preventDefault(); 
+      e.preventDefault();
       toast.error("You Must Be Logged In To Access AI Bot.");
     }
   };
@@ -104,15 +104,6 @@ const NavBar = () => {
           </li>
           <li className="border-t border-purple-400 md:border-0">
             <NavLink
-              to="/supportresources"
-              className="block px-4 py-2 text-white hover:underline"
-              onClick={closeMenu}
-            >
-              Support Resources
-            </NavLink>
-          </li>
-          <li className="border-t border-purple-400 md:border-0">
-            <NavLink
               to="/videoHelp"
               className="block px-4 py-2 text-white hover:underline"
               onClick={closeMenu}
@@ -122,11 +113,11 @@ const NavBar = () => {
           </li>
           <li className="border-t border-purple-400 md:border-0">
             <NavLink
-              to="/reachout"
+              to="/supportresources"
               className="block px-4 py-2 text-white hover:underline"
               onClick={closeMenu}
             >
-              Reach Out
+              Support Resources
             </NavLink>
           </li>
           <li className="border-t border-purple-400 md:border-0">
@@ -140,9 +131,18 @@ const NavBar = () => {
           </li>
           <li className="border-t border-purple-400 md:border-0">
             <NavLink
+              to="/reachout"
+              className="block px-4 py-2 text-white hover:underline"
+              onClick={closeMenu}
+            >
+              Reach Out
+            </NavLink>
+          </li>
+          <li className="border-t border-purple-400 md:border-0">
+            <NavLink
               to="/aibot"
               className="block px-4 py-2 text-white hover:underline"
-              onClick={(e) => handleAIBotClick(e)} 
+              onClick={(e) => handleAIBotClick(e)}
             >
               AI Bot
             </NavLink>

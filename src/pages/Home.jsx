@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { auth, fireDb } from "../firebase/FirebaseConfig";
-import imageOne from "../assets/Designer.png";
-import imageTwo from "../assets/positive.png";
-import imagethree from "../assets/imageOne.png";
-import imagefour from "../assets/imagefour.png";
+import imageOne from "../assets/support.jpeg";
+import imageTwo from "../assets/positive.jpeg";
+import imagethree from "../assets/imageOne.jpeg";
+import imagefour from "../assets/strong.jpeg";
 import Footer from "../component/Footer";
-import carsoul1 from "../assets/Carousel1.png";
-import carsoul2 from "../assets/Carousel2.png";
-import carsoul3 from "../assets/Carousel3.png";
-import carsoul4 from "../assets/Carousel4.png";
-import carsoul5 from "../assets/Carousel5.png";
+import carsoul1 from "../assets/Carousel1.jpg";
+import carsoul2 from "../assets/Carousel2.jpg";
+import carsoul3 from "../assets/Carousel3.jpg";
+import carsoul4 from "../assets/Carousel4.jpg";
+import carsoul5 from "../assets/Carousel5.jpg";
 
 const Home = () => {
   const [userName, setUserName] = useState("");
@@ -63,29 +63,29 @@ const Home = () => {
         className="relative h-[450px] overflow-hidden -mb-72 md:mb-0 "
         data-carousel="slide"
       >
-        <div className="relative h-[80%] lg:h-full overflow-hidden">
+        <div className="relative w-full h-full overflow-hidden">
           <div
             className="duration-700 ease-in-out absolute w-full flex"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             <img
               src={carsoul1}
-              className="w-full h-[70%] lg:h-full object-cover -z-10"
-              alt="..."
-            />
-            <img
-              src={carsoul2}
-              className="w-full h-[70%] lg:h-full object-cover -z-10"
+              className="w-full h-full object-cover -z-10"
               alt="..."
             />
             <img
               src={carsoul3}
-              className="w-full h-[70%] lg:h-full object-cover -z-10"
+              className="w-full h-full object-cover -z-10"
+              alt="..."
+            />
+            <img
+              src={carsoul2}
+              className="w-full h-full object-cover -z-10"
               alt="..."
             />
             <img
               src={carsoul4}
-              className="w-full h-[70%] lg:h-full object-cover -z-10"
+              className="w-full h-full object-cover -z-10"
               alt="..."
             />
             <img
@@ -129,7 +129,7 @@ const Home = () => {
         </button>
       </div>
       {/* Carousel ends */}
-      <header className="text-center lg:mt-8 md:mt-12 mt-14 sm:mt-16">
+      <header className="text-center lg:mt-10 md:mt-10 mt-2 sm:mt-10">
         <h1 className="text-4xl md:text-5xl font-bold text-purple-600">
           {userName ? `${userName}, we care for you.` : "We Care For You"}
         </h1>
@@ -164,14 +164,36 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center p-4 mt-8">
-        <div className="md:w-[30rem] w-[20rem] px-4">
+
+      <div className="flex flex-col md:flex-row items-center justify-center p-4 mt-8 mb-5">
+        <div className="md:w-[30rem] w-[20rem]  px-4">
           <img
-            src={imageTwo}
+            src={imagefour}
             alt="We Are With You"
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto rounded-lg "
           />
         </div>
+        <div className="w-full md:w-1/2 px-4">
+          <section className="text-center md:text-left">
+            <h2 className="text-xl md:text-4xl font-semibold text-purple-600 mb-4">
+              Stay Strong
+            </h2>
+            <p className="text-gray-700 mb-2 md:text-lg">
+              Life can throw unexpected challenges our way, but remember that
+              within you lies the strength to overcome anything. Embrace your
+              resilience and courage, and know that with each step, you're
+              becoming stronger.
+            </p>
+            <p className="text-gray-700 md:text-lg">
+              Surround yourself with positivity, lean on your support system,
+              and never lose sight of your goals. We're here to walk this
+              journey with you, offering support and encouragement every step of
+              the way.
+            </p>
+          </section>
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center p-4 mt-8">
         <div className="w-full md:w-1/2 px-4">
           <section className="text-center md:text-left">
             <h2 className="text-xl md:text-4xl font-semibold text-purple-600 mb-4">
@@ -191,8 +213,22 @@ const Home = () => {
             </p>
           </section>
         </div>
+        <div className="md:w-[30rem] w-[20rem] px-4">
+          <img
+            src={imageTwo}
+            alt="We Are With You"
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center p-4 mt-8">
+        <div className="md:w-[30rem] w-[20rem] px-4">
+          <img
+            src={imagethree}
+            alt="We Are With You"
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
         <div className="w-full md:w-1/2 px-4">
           <section className="text-center md:text-left">
             <h2 className="text-xl md:text-4xl font-semibold text-purple-600 mb-4">
@@ -209,41 +245,6 @@ const Home = () => {
               Don't hesitate to reach out whenever you need support. Your
               well-being is important to us, and we're committed to helping you
               navigate through any difficulties you may encounter.
-            </p>
-          </section>
-        </div>
-        <div className="md:w-[30rem] w-[20rem] px-4">
-          <img
-            src={imagethree}
-            alt="We Are With You"
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
-      </div>
-      <div className="flex flex-col md:flex-row items-center justify-center p-4 mt-8 mb-5">
-        <div className="md:w-[30rem] w-[20rem] px-4">
-          <img
-            src={imagefour}
-            alt="We Are With You"
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
-        <div className="w-full md:w-1/2 px-4">
-          <section className="text-center md:text-left">
-            <h2 className="text-xl md:text-4xl font-semibold text-purple-600 mb-4">
-              Stay Strong
-            </h2>
-            <p className="text-gray-700 mb-2 md:text-lg">
-              Life can throw unexpected challenges our way, but remember that
-              within you lies the strength to overcome anything. Embrace your
-              resilience and courage, and know that with each step, you're
-              becoming stronger.
-            </p>
-            <p className="text-gray-700 md:text-lg">
-              Surround yourself with positivity, lean on your support system,
-              and never lose sight of your goals. We're here to walk this
-              journey with you, offering support and encouragement every step of
-              the way.
             </p>
           </section>
         </div>

@@ -71,7 +71,7 @@ const AiBot = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col justify-between min-h-screen bg-gray-100"
+      className="flex flex-col justify-between min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white"
     >
       <h1 className="text-3xl text-purple-600 font-extrabold mt-6 text-center w-[95%] mx-auto select-none">
         <motion.span whileHover={{ scale: 1.1 }} className="cursor-pointer">
@@ -122,7 +122,7 @@ const AiBot = () => {
         <input
           type="text"
           placeholder="Type your query..."
-          className="flex-grow px-4 py-4 rounded-lg border-2 border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
+          className="flex-grow font-medium px-4 py-4 rounded-lg border-2 border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all bg-white text-purple-500"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={(e) => {
