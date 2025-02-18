@@ -23,23 +23,9 @@ const NavBar = () => {
     return () => unsubscribe();
   }, []);
 
-  // Function to toggle menu
   const toggleMenu = () => {
     setIsOpen((prevState) => !prevState);
   };
-
-  // Function to close menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   const closeMenu = () => {
     setIsOpen(false);
@@ -75,10 +61,10 @@ const NavBar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-white focus:outline-none z-50"
         >
           <svg
-            className="w-6 h-6"
+            className="w-6 h-6 z-50"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -101,49 +87,85 @@ const NavBar = () => {
           } md:block absolute md:relative top-[3rem] right-0 md:top-0 md:right-auto bg-purple-600 md:bg-transparent w-full md:w-auto text-left z-50 md:z-auto`}
         >
           <li className="border-t border-purple-400 md:border-0">
-            <NavLink to="/" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
+            <NavLink
+              to="/"
+              className="block px-4 py-2 text-white hover:underline"
+              onClick={closeMenu}
+            >
               Home
             </NavLink>
           </li>
           <li className="border-t border-purple-400 md:border-0">
-            <NavLink to="/supportresources" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
+            <NavLink
+              to="/supportresources"
+              className="block px-4 py-2 text-white hover:underline"
+              onClick={closeMenu}
+            >
               Support Resources
             </NavLink>
           </li>
-           <li className="border-t border-purple-400 md:border-0">
-            <NavLink to="/videoHelp" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
+          <li className="border-t border-purple-400 md:border-0">
+            <NavLink
+              to="/videoHelp"
+              className="block px-4 py-2 text-white hover:underline"
+              onClick={closeMenu}
+            >
               Videos Help
             </NavLink>
           </li>
           <li className="border-t border-purple-400 md:border-0">
-            <NavLink to="/reachout" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
+            <NavLink
+              to="/reachout"
+              className="block px-4 py-2 text-white hover:underline"
+              onClick={closeMenu}
+            >
               Reach Out
             </NavLink>
           </li>
           <li className="border-t border-purple-400 md:border-0">
-            <NavLink to="/emergencycontacts" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
+            <NavLink
+              to="/emergencycontacts"
+              className="block px-4 py-2 text-white hover:underline"
+              onClick={closeMenu}
+            >
               Emergency Contacts
             </NavLink>
           </li>
           <li className="border-t border-purple-400 md:border-0">
-            <NavLink to="/about" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
-              About
+            <NavLink
+              to="/aibot"
+              className="block px-4 py-2 text-white hover:underline"
+              onClick={closeMenu}
+            >
+              AI Bot
             </NavLink>
           </li>
           <li className="border-t border-purple-400 md:border-0">
-            <NavLink to="/aibot" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
-              AI Bot
+            <NavLink
+              to="/about"
+              className="block px-4 py-2 text-white hover:underline"
+              onClick={closeMenu}
+            >
+              About
             </NavLink>
-          </li> 
+          </li>
           {!isLoggedIn && (
             <>
               <li className="border-t border-purple-400 md:border-0">
-                <NavLink to="/login" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
+                <NavLink
+                  to="/login"
+                  className="block px-4 py-2 text-white hover:underline"
+                  onClick={closeMenu}
+                >
                   Login
                 </NavLink>
               </li>
               <li className="border-t border-purple-400 md:border-0">
-                <NavLink to="/signup" className="block px-4 py-2 text-white hover:underline" onClick={closeMenu}>
+                <NavLink
+                  to="/signup"
+                  className="block px-4 py-2 text-white hover:underline"
+                  onClick={closeMenu}
+                >
                   Sign Up
                 </NavLink>
               </li>
@@ -151,7 +173,10 @@ const NavBar = () => {
           )}
           {isLoggedIn && (
             <li className="border-t border-purple-400 md:border-0">
-              <button onClick={logout} className="block px-4 py-2 text-white hover:underline">
+              <button
+                onClick={logout}
+                className="block px-4 py-2 text-white hover:underline"
+              >
                 Logout
               </button>
             </li>

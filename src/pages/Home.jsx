@@ -63,34 +63,34 @@ const Home = () => {
         className="relative h-[450px] overflow-hidden -mb-72 md:mb-0 "
         data-carousel="slide"
       >
-        <div className="relative h-full overflow-hidden">
+        <div className="relative h-[80%] lg:h-full overflow-hidden">
           <div
             className="duration-700 ease-in-out absolute w-full flex"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             <img
               src={carsoul1}
-              className="w-full h-full object-cover -z-10"
+              className="w-full h-[70%] lg:h-full object-cover -z-10"
               alt="..."
             />
             <img
               src={carsoul2}
-              className="w-full h-full object-cover -z-10"
+              className="w-full h-[70%] lg:h-full object-cover -z-10"
               alt="..."
             />
             <img
               src={carsoul3}
-              className="w-full h-full object-cover -z-10"
+              className="w-full h-[70%] lg:h-full object-cover -z-10"
               alt="..."
             />
             <img
               src={carsoul4}
-              className="w-full h-full object-cover -z-10"
+              className="w-full h-[70%] lg:h-full object-cover -z-10"
               alt="..."
             />
             <img
               src={carsoul5}
-              className="w-full h-full object-cover -z-10"
+              className="w-full object-cover -z-10"
               alt="..."
             />
           </div>
@@ -129,12 +129,14 @@ const Home = () => {
         </button>
       </div>
       {/* Carousel ends */}
-      <header className="text-center lg:mt-5 sm:mt-10 md:mt-0 mt-12">
+      <header className="text-center lg:mt-8 md:mt-12 mt-14 sm:mt-16">
         <h1 className="text-4xl md:text-5xl font-bold text-purple-600">
           {userName ? `${userName}, we care for you.` : "We Care For You"}
         </h1>
         <p className="text-d md:text-lg text-gray-700 mt-4">
-        Support is just a call away - You are not alone. We are here for you 😊❤️        </p>
+          Support is just a call away - You are not alone. We are here for you
+          😊❤️{" "}
+        </p>
       </header>
       <div className="flex flex-col md:flex-row items-center justify-center p-4 mt-8">
         <div className="w-full md:w-1/2 px-4">
@@ -240,8 +242,8 @@ const Home = () => {
             <p className="text-gray-700 md:text-lg">
               Surround yourself with positivity, lean on your support system,
               and never lose sight of your goals. We're here to walk this
-              journey with you, offering support and encouragement every step
-              of the way.
+              journey with you, offering support and encouragement every step of
+              the way.
             </p>
           </section>
         </div>
