@@ -69,12 +69,12 @@ const Home = () => {
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             <img
-              src={carsoul1}
+              src={carsoul3}
               className="w-full h-full object-cover -z-10"
               alt="..."
             />
             <img
-              src={carsoul3}
+              src={carsoul1}
               className="w-full h-full object-cover -z-10"
               alt="..."
             />
