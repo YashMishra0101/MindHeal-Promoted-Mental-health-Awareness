@@ -84,12 +84,12 @@ const Home = () => {
               alt="..."
             />
             <img
-              src={carsoul4}
+              src={carsoul2}
               className="w-full h-full object-cover -z-10"
               alt="..."
             />
             <img
-              src={carsoul2}
+              src={carsoul4}
               className="w-full object-cover -z-10"
               alt="..."
             />

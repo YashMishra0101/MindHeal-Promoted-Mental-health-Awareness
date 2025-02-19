@@ -56,9 +56,9 @@ const NavBar = () => {
   return (
     <nav className="bg-purple-600 p-4 z-50">
       <div className="container mx-auto flex justify-between items-center z-50">
-        <span className="flex items-center space-x-3">
+        <span className="flex items-center space-x-2">
           <Link to="/" onClick={closeMenu}>
-            <img src={logo} className="h-8" alt="SafeSpace Logo" />
+            <img src={logo} className="h-8 rounded-sm" alt="SafeSpace Logo" />
           </Link>
           <Link to="/" onClick={closeMenu}>
             <div className="text-white font-bold text-xl">MindHeal</div>
@@ -91,7 +91,7 @@ const NavBar = () => {
           ref={menuRef}
           className={`md:flex md:space-x-4 ${
             isOpen ? "block" : "hidden"
-          } md:block absolute md:relative top-[3rem] right-0 md:top-0 md:right-auto bg-purple-600 md:bg-transparent w-full md:w-auto text-left z-50 md:z-auto`}
+          } md:block absolute md:relative top-[3rem]  right-0 md:top-0 md:right-auto bg-purple-600 md:bg-transparent w-full md:w-auto text-left z-50 md:z-auto`}
         >
           <li className="border-t border-purple-400 md:border-0">
             <NavLink
