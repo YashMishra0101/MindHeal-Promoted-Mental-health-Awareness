@@ -68,7 +68,7 @@ const SignUp = () => {
 
   return (
     <div>
-      <div className="flex justify-center items-center bg-gradient-to-r from-green-200 to-blue-300 min-h-screen pb-14 md:pb-0">
+      <div className="flex justify-center items-center bg-gradient-to-r from-green-200 to-blue-400 min-h-screen pb-14 md:pb-0">
         <form onSubmit={handleSubmit} className="max-w-md md:w-full w-[90%] md:-mt-10 mt-10 px-6 py-5 border rounded-lg shadow-md md:mb-5 ">
           <h2 className="text-3xl font-bold mb-5 text-center text-white select-none">Create Your Account</h2>
           
@@ -113,7 +113,7 @@ const SignUp = () => {
             >Sign Up</button>
         </form>
       </div>
-     <div className="md:mt-0 ">
+     <div className="md:-mt-14 ">
      <Footer />
      </div>
     </div>

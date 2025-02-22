@@ -36,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-green-200 to-blue-300  h-full">
+    <div className="bg-gradient-to-r from-green-200 to-blue-400  h-full">
       <span>.</span>
       <div className="container mx-auto mt-7 max-w-md md:w-full w-[90%] px-6 py-7 border border-white rounded-lg shadow-md ">
         <h1 className="text-3xl font-bold text-white text-center mb-6 select-none">Login</h1>

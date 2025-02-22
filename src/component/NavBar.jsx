@@ -73,7 +73,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-green-500 to-stone-500">
+    <div className="bg-gradient-to-br from-green-500 to-stone-500 select-none">
       <nav className="relative px-6 py-4 flex justify-between items-center backdrop-blur-lg bg-white/10 border-b border-white/10">
         {/* Logo */}
         <Link
@@ -150,6 +150,24 @@ const NavBar = () => {
                     : "text-white  text-sm font-semibold hover:text-yellow-300"
                 } transition duration-300`
               }
+              to="/aibot"
+            >
+              AI Bot
+            </NavLink>
+            
+          </li>
+          <li>
+            <BsThreeDotsVertical className="text-white text-xl" />
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                ` ${
+                  isActive
+                    ? "text-yellow-300 font-bold text-[0.9rem]"
+                    : "text-white  text-sm font-semibold hover:text-yellow-300"
+                } transition duration-300`
+              }
               to="/supportresources"
             >
               Support Resources
@@ -189,23 +207,6 @@ const NavBar = () => {
               Contact Us
             </NavLink>
           </li>
-          <li>
-            <BsThreeDotsVertical className="text-white text-xl" />
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                ` ${
-                  isActive
-                    ? "text-yellow-300 font-bold text-[0.9rem]"
-                    : "text-white  text-sm font-semibold hover:text-yellow-300"
-                } transition duration-300`
-              }
-              to="/aibot"
-            >
-              AI Bot
-            </NavLink>
-          </li>
         </ul>
 
         {/* Login/Signup Buttons (Desktop) */}
@@ -218,7 +219,7 @@ const NavBar = () => {
                   `px-6 py-2 text-sm font-semibold rounded-lg transition duration-300 ${
                     isActive
                       ? "bg-blue-600 text-white"
-                      : "bg-white/10 text-white hover:bg-blue-600"
+                      : "bg-white/20 text-white hover:bg-blue-600"
                   }`
                 }
               >
@@ -230,7 +231,7 @@ const NavBar = () => {
                   `px-6 py-2 text-sm font-semibold rounded-lg transition duration-300 ${
                     isActive
                       ? "bg-blue-600 text-white"
-                      : "bg-white/10 text-white hover:bg-blue-600"
+                      : "bg-white/20 text-white hover:bg-blue-600"
                   }`
                 }
               >
@@ -240,7 +241,7 @@ const NavBar = () => {
           ) : (
             <button
               onClick={logout}
-              className="px-6 py-2 text-sm font-semibold rounded-lg bg-red-600 text-white hover:bg-red-700 transition duration-300"
+              className="px-6 py-2 text-sm font-semibold rounded-lg  bg-white/20 text-white hover:bg-blue-600  transition duration-300"
             >
               Logout
             </button>
@@ -258,7 +259,7 @@ const NavBar = () => {
           className="navbar-backdrop fixed inset-0 bg-black/50"
           onClick={toggleMenu}
         ></div>
-        <nav className="fixed top-0 left-0 bottom-0 w-5/6 max-w-sm bg-gradient-to-br from-green-500 to-stone-500 border-r border-white/10 overflow-y-auto">
+        <nav className="fixed top-0 left-0 bottom-0 w-5/6 max-w-sm bg-gradient-to-br from-green-500 to-stone-500 border-r border-white/30 overflow-y-auto">
           <div className="flex items-center justify-between px-6 py-4">
             <Link
               className="flex items-center font-bold leading-none text-green-800 no-underline"
@@ -322,7 +323,7 @@ const NavBar = () => {
                     `block w-full px-4 py-3 mb-3 text-sm text-center font-semibold rounded-lg transition duration-300 ${
                       isActive
                         ? "bg-blue-600 text-white"
-                        : "bg-white/10 text-white hover:bg-blue-600"
+                        : "bg-white/20 text-white hover:bg-blue-600"
                     }`
                   }
                   onClick={toggleMenu}
@@ -346,7 +347,7 @@ const NavBar = () => {
             ) : (
               <button
                 onClick={logout}
-                className="block w-full px-4 py-3 mb-3 text-sm text-center font-semibold rounded-lg bg-white/10 text-white hover:bg-blue-600 transition duration-300"
+                className="block w-full px-4 py-3 mb-3 text-sm text-center font-semibold rounded-lg bg-white/20 text-white hover:bg-blue-600 transition duration-300"
               >
                 Logout
               </button>

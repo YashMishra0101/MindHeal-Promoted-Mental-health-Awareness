@@ -134,8 +134,7 @@ const Home = () => {
           {userName ? `${userName}, we care for you.` : "We Care For You"}
         </h1>
         <p className="text-d md:text-lg text-gray-700 mt-4">
-          Support is just a call away - You are not alone. We are here for you
-          {" "}
+          Support is just a call away - You are not alone. We are here for you{" "}
         </p>
       </header>
       <div className="flex flex-col md:flex-row items-center justify-center p-4 mt-8">

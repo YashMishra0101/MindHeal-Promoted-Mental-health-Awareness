@@ -6,6 +6,27 @@ import Spinner from "../component/Spinner";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { auth, fireDb } from "../firebase/FirebaseConfig";
+import CircleBackground from "../component/CircleBackground"
+
+const TypingEffect = ({ text }) => {
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index <= text.length) {
+        setDisplayedText(text.slice(0, index));
+        index++;
+      } else {
+        index = 0; // Restart typing effect
+      }
+    }, 185);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return <span>{displayedText}</span>;
+};
 
 const AiBot = () => {
   const [chatHistory, setChatHistory] = useState([]);
@@ -71,19 +92,23 @@ const AiBot = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col justify-between min-h-screen bg-gradient-to-br from-teal-700  to-orange-700 relative overflow-hidden text-white"
+      className="flex flex-col justify-between min-h-screen bg-gradient-to-br from-white/30  to-teal-400 relative overflow-hidden text-white z-40"
     >
-      <h1 className="text-3xl text-purple-600 font-extrabold mt-6 text-center w-[95%] mx-auto select-none">
-        <motion.span whileHover={{ scale: 1.1 }} className="cursor-pointer">
+      <CircleBackground /> 
+      <motion.h1
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.3 }}
+        className="text-4xl text-purple-600 font-extrabold mt-6 text-center w-[95%] mx-auto select-none"
+      >
+        <span className="cursor-pointer">
           AI Assistance -
-        </motion.span>
-        <span className="text-base  text-green-600 ml-2 font-medium">
-          {userName ? `${userName} I care for you ☺️.` : "I Care For You "}
         </span>
-      </h1>
-      {/* <h1 className="text-sm md:text-2xl font-bold text-purple-600 text-center mr-6">
-          {userName ? `${userName}, we care for you.` : "We Care For You"}
-        </h1> */}
+        <span className="text-base text-green-600 ml-2 font-medium">
+          <TypingEffect text={`${userName ? userName + " I care for you" : "I Care For You"}`} />
+        </span>
+      </motion.h1>
+
       <div className="flex-grow p-4 overflow-y-auto">
         {chatHistory.map((message, index) => (
           <motion.div
@@ -132,8 +157,9 @@ const AiBot = () => {
           }}
         />
         <motion.button
-          className="ml-2 px-4 py-3 bg-purple-600 text-white rounded-lg focus:outline-none hover:bg-purple-700 transition-all"
+          className="ml-2 px-4 py-3 bg-purple-600 text-white outline-none rounded-lg focus:outline-none hover:bg-purple-700 transition-all"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           onClick={sendMessage}
         >
           Send
