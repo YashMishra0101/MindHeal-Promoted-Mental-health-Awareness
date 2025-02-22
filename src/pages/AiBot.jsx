@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import Markdown from "react-markdown";
 import { motion } from "framer-motion";
 import Spinner from "../component/Spinner";
@@ -71,14 +71,14 @@ const AiBot = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col justify-between min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white"
+      className="flex flex-col justify-between min-h-screen bg-gradient-to-br from-teal-700  to-orange-700 relative overflow-hidden text-white"
     >
       <h1 className="text-3xl text-purple-600 font-extrabold mt-6 text-center w-[95%] mx-auto select-none">
         <motion.span whileHover={{ scale: 1.1 }} className="cursor-pointer">
           AI Assistance -
         </motion.span>
         <span className="text-base  text-green-600 ml-2 font-medium">
-          {userName ? `${userName} I care for you ☺️.` : "I Care For You ☺️"}
+          {userName ? `${userName} I care for you ☺️.` : "I Care For You "}
         </span>
       </h1>
       {/* <h1 className="text-sm md:text-2xl font-bold text-purple-600 text-center mr-6">

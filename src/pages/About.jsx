@@ -13,7 +13,7 @@ const AboutUs = () => {
         </div>
         <div className="md:w-1/2 md:ml-6">
           <p className="text-gray-700 mb-4">
-            At SafeSpace, our mission is to provide a safe and supportive environment for individuals struggling with mental health challenges. We understand that seeking help can be difficult, which is why we've created a platform where you can find resources, connect with others, and access professional support.
+            At Mind Heal, our mission is to provide a safe and supportive environment for individuals struggling with mental health challenges. We understand that seeking help can be difficult, which is why we've created a platform where you can find resources, connect with others, and access professional support.
           </p>
           <p className="text-gray-700 mb-4">
             Our team is dedicated to promoting mental health awareness, breaking the stigma surrounding mental illness, and providing resources to those in need. We believe that everyone deserves access to quality mental health care, and we're committed to making a positive impact in the lives of our community members.

@@ -1,4 +1,4 @@
-# MindHeal
+# MindMate
 
 <img src="src/assets/Screenshot (72).png">
 

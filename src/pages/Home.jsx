@@ -5,7 +5,7 @@ import { auth, fireDb } from "../firebase/FirebaseConfig";
 import imageOne from "../assets/support.jpeg";
 import imageTwo from "../assets/positive.jpeg";
 import imagethree from "../assets/imageOne.jpeg";
-import imagefour from "../assets/strong.jpeg";
+import imagefour from "../assets/staystrong.jpg";
 import Footer from "../component/Footer";
 import carsoul1 from "../assets/Carousel1.jpg";
 import carsoul2 from "../assets/Carousel2.jpg";
@@ -135,7 +135,7 @@ const Home = () => {
         </h1>
         <p className="text-d md:text-lg text-gray-700 mt-4">
           Support is just a call away - You are not alone. We are here for you
-          😊❤️{" "}
+          {" "}
         </p>
       </header>
       <div className="flex flex-col md:flex-row items-center justify-center p-4 mt-8">

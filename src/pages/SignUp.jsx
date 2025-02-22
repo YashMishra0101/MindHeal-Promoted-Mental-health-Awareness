@@ -68,13 +68,13 @@ const SignUp = () => {
 
   return (
     <div>
-      <div className="flex justify-center items-center max-h-screen bg-gray-100">
-        <form onSubmit={handleSubmit} className="max-w-md md:w-full w-[90%] md:mt-5 mt-16 px-6 py-5 border border-gray-300 rounded-lg shadow-md bg-white md:mb-3 ">
-          <h2 className="text-3xl font-bold mb-5 text-center text-gray-800">Create Your Account</h2>
+      <div className="flex justify-center items-center bg-gradient-to-r from-green-200 to-blue-300 min-h-screen pb-14 md:pb-0">
+        <form onSubmit={handleSubmit} className="max-w-md md:w-full w-[90%] md:-mt-10 mt-10 px-6 py-5 border rounded-lg shadow-md md:mb-5 ">
+          <h2 className="text-3xl font-bold mb-5 text-center text-white select-none">Create Your Account</h2>
           
-          <div className="flex gap-4 mb-4">
-            <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your Name" className="w-1/2 border rounded py-2 px-3" required />
-            <select name="gender" value={formData.gender} onChange={handleChange} className="w-1/2 border rounded py-2 px-3 text-sm md:text-base" required>
+          <div className="flex gap-4 mb-4 ">
+            <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your Name" className="w-1/2 outline-none border focus:border-blue-600 rounded-lg py-2 px-3" required />
+            <select name="gender" value={formData.gender} onChange={handleChange} className="w-1/2 outline-none border focus:border-blue-600 py-2 px-3 text-sm md:text-base rounded-lg " required>
               <option value="">Select Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -82,36 +82,38 @@ const SignUp = () => {
             </select>
           </div>
           
-          <div className="flex gap-4 mb-4">
-            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" className="w-1/2 border rounded py-2 px-3" required />
-            <input type="number" name="age" value={formData.age} onChange={handleChange} placeholder="Age" className="w-1/2 border rounded py-2 px-3" required />
+          <div className="flex gap-4 mb-4 cursor-pointer">
+            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" className="w-1/2 rounded py-2 px-3 outline-none border focus:border-blue-600" required />
+            <input type="number" name="age" value={formData.age} onChange={handleChange} placeholder="Age" className="w-1/2 rounded py-2 px-3 outline-none border focus:border-blue-600" required />
           </div>
           
           <div className="flex gap-4 mb-4">
-            <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Address" className="w-1/2 border rounded py-2 px-3" required />
-            <input type="text" name="pinCode" value={formData.pinCode} onChange={handleChange} placeholder="Pin Code" className="w-1/2 border rounded py-2 px-3" required />
+            <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Address" className="w-1/2 outline-none border focus:border-blue-600 rounded py-2 px-3" required />
+            <input type="text" name="pinCode" value={formData.pinCode} onChange={handleChange} placeholder="Pin Code" className="w-1/2 outline-none border focus:border-blue-600 rounded py-2 px-3" required />
           </div>
           
-          <textarea name="userStory" value={formData.userStory} onChange={handleChange} placeholder="Tell us about yourself..." className="w-full border rounded py-2 px-3 mb-4 h-24" required />
+          {/* <textarea name="userStory" value={formData.userStory} onChange={handleChange} placeholder="Tell us about yourself..." className="w-full border rounded py-2 px-3 mb-4 h-24" required /> */}
           
           <div className="relative mb-4">
-            <input type={showPassword ? "text" : "password"} name="password" value={formData.password} onChange={handleChange} placeholder="Password" className="w-full border rounded py-2 px-3" required />
+            <input type={showPassword ? "text" : "password"} name="password" value={formData.password} onChange={handleChange} placeholder="Password" className="w-full outline-none border focus:border-blue-600 rounded py-2 px-3" required />
             <span className="absolute right-3 top-3 cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
               {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
             </span>
           </div>
           
           <div className="relative mb-4">
-            <input type={showConfirmPassword ? "text" : "password"} name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} placeholder="Confirm Password" className="w-full border rounded py-2 px-3" required />
+            <input type={showConfirmPassword ? "text" : "password"} name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} placeholder="Confirm Password" className="w-full outline-none border focus:border-blue-600 rounded py-2 px-3" required />
             <span className="absolute right-3 top-3 cursor-pointer" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
               {showConfirmPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
             </span>
           </div>
           
-          <button type="submit" className="w-full py-2 px-4 bg-purple-600 text-white rounded-md hover:bg-purple-700">Sign Up</button>
+          <button type="submit" 
+            className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
+            >Sign Up</button>
         </form>
       </div>
-     <div className="md:mt-0 mt-24">
+     <div className="md:mt-0 ">
      <Footer />
      </div>
     </div>

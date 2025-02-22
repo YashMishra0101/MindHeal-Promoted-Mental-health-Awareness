@@ -8,4 +8,17 @@ export default {
     extend: {},
   },
   plugins: [],
-}
+  theme: {
+    extend: {
+      animation: {
+        moveBackground: "moveBackground 10s infinite alternate",
+      },
+      keyframes: {
+        moveBackground: {
+          "0%": { transform: "translate(-10%, -10%)" },
+          "100%": { transform: "translate(10%, 10%)" },
+        },
+      },
+    },
+  },
+};

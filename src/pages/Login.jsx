@@ -36,9 +36,10 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <div className="container mx-auto mt-12 max-w-md md:w-full w-[90%] px-6 py-8 border border-gray-300 rounded-lg shadow-md bg-white">
-        <h1 className="text-3xl font-semibold text-center mb-6">Login</h1>
+    <div className="bg-gradient-to-r from-green-200 to-blue-300  h-full">
+      <span>.</span>
+      <div className="container mx-auto mt-7 max-w-md md:w-full w-[90%] px-6 py-7 border border-white rounded-lg shadow-md ">
+        <h1 className="text-3xl font-bold text-white text-center mb-6 select-none">Login</h1>
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700">
@@ -49,7 +50,7 @@ const Login = () => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="block w-full px-4 py-2 mt-2 text-gray-700 border rounded-md focus:outline-none focus:border-purple-500"
+              className="block w-full px-4 py-2 mt-2 text-gray-700 border rounded-md focus:outline-none focus:border-blue-600"
               placeholder="Enter your email"
             />
           </div>
@@ -63,7 +64,7 @@ const Login = () => {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="block w-full px-4 py-2 mt-2 text-gray-700 border rounded-md focus:outline-none focus:border-purple-500"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 border rounded-md focus:outline-none focus:border-blue-600"
                 placeholder="Enter your password"
               />
               <button
@@ -81,14 +82,14 @@ const Login = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-purple-600 text-white rounded-md hover:bg-purple-700 focus:outline-none focus:bg-purple-700"
+            className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
           >
             Login
           </button>
         </form>
         <p className="text-center mt-4 text-gray-700">
           Don't have an account?{" "}
-          <Link to="/signup" className="text-purple-600 hover:underline">
+          <Link to="/signup" className="text-blue-500 hover:underline">
             Sign up here
           </Link>
         </p>
