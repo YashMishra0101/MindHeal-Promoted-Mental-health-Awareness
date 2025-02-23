@@ -11,6 +11,7 @@ import Footer from "../component/Footer";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import MindMateVideo from '../assets/MindMate.mp4'; // Import the video file
 
 const Home = () => {
   const [userName, setUserName] = useState("");
@@ -212,7 +213,7 @@ const Home = () => {
                 controls // Adds play, pause, volume controls
                 poster={thumnail} // Add your thumbnail here
               >
-                <source src="src/assets/MindMate.mp4" type="video/mp4" />
+                <source src={MindMateVideo } type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

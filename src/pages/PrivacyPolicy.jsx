@@ -102,7 +102,7 @@ const PrivacyPolicy = () => {
               If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
             </p>
             <p className="text-gray-700 mt-2">
-              <strong>Email:</strong> support@minemate.com<br />
+              <strong>Email:</strong> support@mindmate.com<br />
               <strong>Phone:</strong> +91-1234567890<br />
               <strong>Address:</strong> 123 Mental Health Lane, Wellness City, India - 123456
             </p>
