@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
               Introduction
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              Welcome to <strong>Minemate</strong>, a platform dedicated to suicide prevention and mental health awareness. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy outlines the types of information we collect, how we use it, and the steps we take to safeguard it.
+              Welcome to <strong>Mindmate</strong>, a platform dedicated to suicide prevention and mental health awareness. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy outlines the types of information we collect, how we use it, and the steps we take to safeguard it.
             </p>
           </div>
 

@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between w-full md:items-center pl-16">
           <div className="mb-6 md:mb-0 md:w-1/3 ">
             <h2 className="text-xl font-semibold mb-2"></h2>MindMate
-            <p className="text-sm">Email: support@minemate.com</p>
+            <p className="text-sm">Email: support@mindmate.com</p>
             <p className="text-sm">Phone: 91-1234567890</p>
           </div>
           <div className="mb-6 md:mb-0 md:w-1/3">
