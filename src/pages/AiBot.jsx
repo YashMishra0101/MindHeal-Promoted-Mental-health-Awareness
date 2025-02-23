@@ -92,7 +92,7 @@ const AiBot = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col justify-between min-h-screen bg-gradient-to-br from-white/30  to-teal-400 relative overflow-hidden text-white z-40"
+      className="flex flex-col justify-between min-h-screen bg-gradient-to-br from-teal-100 to-teal-400 relative overflow-hidden text-white z-40"
     >
       <CircleBackground /> 
       <motion.h1
@@ -104,7 +104,7 @@ const AiBot = () => {
         <span className="cursor-pointer">
           AI Assistance -
         </span>
-        <span className="text-base text-green-600 ml-2 font-medium">
+        <span className="text-base text-green-600 ml-2 font-semibold">
           <TypingEffect text={`${userName ? userName + " I care for you" : "I Care For You"}`} />
         </span>
       </motion.h1>

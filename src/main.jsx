@@ -14,7 +14,9 @@ import {
   SignUp,
   SupportResources,
   VideosHelp,
-  AiBot
+  AiBot,
+  PrivacyPolicy,
+  PageNotFound,
 } from "./component/index.js";
 
 import {
@@ -34,8 +36,10 @@ const router = createBrowserRouter(
       <Route path="videoHelp" element={<VideosHelp/>} />
       <Route path="aibot" element={<AiBot/>} />
       <Route path="login" element={<Login />} />
+      <Route path="privacypolicy" element={<PrivacyPolicy />} />
       <Route path="reachout" element={<ReachOut />} />
       <Route path="signup" element={<SignUp />} />
+      <Route path="*" element={<PageNotFound />} />
     </Route>
   )
 );

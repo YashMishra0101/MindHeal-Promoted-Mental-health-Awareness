@@ -7,3 +7,5 @@ export {default as SignUp } from "../pages/SignUp.jsx";
 export {default as SupportResources } from "../pages/SupportResources.jsx";
 export {default as  VideosHelp} from "../pages/VideosHelp.jsx";
 export {default as  AiBot} from "../pages/AiBot.jsx";
+export {default as  PrivacyPolicy} from "../pages/PrivacyPolicy.jsx";
+export {default as  PageNotFound} from "../pages/PageNotFound.jsx";
