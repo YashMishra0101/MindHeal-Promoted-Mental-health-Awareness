@@ -14,16 +14,14 @@ const Footer = () => {
           <div className="mb-6 md:mb-0 md:w-1/3">
             <h2 className="text-lg font-semibold mb-2">Quick Links</h2>
             <ul>
-              <li className="text-sm mb-1">
+              <li className="text-sm mb-1 hover:underline">
                 <Link to="/about">About Us</Link>
               </li>
-              <li className="text-sm mb-1">
+              <li className="text-sm mb-1 hover:underline">
                 <Link to="/reachout">Contact Us</Link>
               </li>
-              <li className="text-sm mb-1">
-                <a href="/privacypolicy" className="hover:underline">
-                  Privacy Policy
-                </a>
+              <li className="text-sm mb-1 hover:underline">
+                <Link to="/privacypolicy"> Privacy Policy</Link>
               </li>
             </ul>
           </div>
@@ -41,7 +39,7 @@ const Footer = () => {
               <li className="text-sm mb-1">
                 <a className="hover:underline cursor-pointer">FAQ</a>
               </li>
-              <li className="text-sm mb-1">
+              <li className="text-sm mb-1 hover:underline">
                 <Link to="/reachout">Customer Support</Link>
               </li>
               <li className="text-sm mb-1">
