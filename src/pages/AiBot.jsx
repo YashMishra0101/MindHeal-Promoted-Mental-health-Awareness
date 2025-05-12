@@ -59,7 +59,7 @@ const AiBot = () => {
 
   const API_KEY = import.meta.env.VITE_Geemini_API_KEY;
   const genAI = new GoogleGenerativeAI(API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
   const sendMessage = async () => {
     if (inputValue.trim() === "") return;
