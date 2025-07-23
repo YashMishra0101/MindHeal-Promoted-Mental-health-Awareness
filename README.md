@@ -1,4 +1,4 @@
-# MindHeal – Mental Wellness Web App
+# 🧠 MindHeal – Mental Wellness Web App
 
 <img src="src/assets/Screenshot (222).png">
 
@@ -10,9 +10,6 @@
 
 <img src="src/assets/Screenshot (227).png">
 
-
-
-# 🧠 MindHeal – Mental Wellness Web App
 
 MindHeal is a modern mental wellness web application designed to provide emotional support, self-help resources, and easy access to professional help. Developed using **HTML5**, **Tailwind CSS**, **JavaScript**, and **React.js**, it features a clean, beautiful UI and focuses on **mental health awareness** and **emergency support**.
 
